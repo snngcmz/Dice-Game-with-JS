@@ -34,7 +34,7 @@ const init = function(){
 
     diceEl.classList.add('hidden');
 
-    document.querySelector(`.player--${activePlayer}`).classList.add('.player--active');
+    document.querySelector(`.player--${activePlayer}`).classList.add('player--active');
     // player0El.classList.remove('player--active');
     // player1El.classList.remove('player--active'); 
     
@@ -95,11 +95,11 @@ btnHold.addEventListener('click', function(){
         document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
         
         if(scores[activePlayer] >= 100){
-            playing = false;
-            dice1.classList.add('hidden');                    
+            playing = false;           
+            diceEl.classList.add('hidden');                  
         
-            document.querySelector(`.player--${activePlayer}`).classList.add('.player--winner');
-            document.querySelector(`.player--${activePlayer}`).classList.remove('.player--active');            
+            document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+            document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
         }
         else
         {
